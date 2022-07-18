@@ -1,40 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Simple-book</title>
-    <link rel="stylesheet" href="homePage.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cabin+Condensed&display=swap" rel="stylesheet">
-</head>
-<body>
+    <link rel="stylesheet" href="homePage.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cabin+Condensed&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+  </head>
+  <body>
     <div class="navbar">
-        <img src="images/logo.png" alt="">
-        <div class="center">
-            <ul>
-                <li>
-                    Home
-                </li>
-                <li>Orders</li>
-                <li> About</li>
-               </ul>
-        </div>
+      <img src="images/logo.png" alt="" />
+      <div class="center">
+        <ul>
+          <li>Home</li>
+          <li>Orders</li>
+          <li>About</li>
+        </ul>
+        <ul>
+          <li><i data-feather="search"></i></li>
+          <li><i data-feather="user"></i></li>
+        </ul>
+      </div>
     </div>
     <div class="b-selling">
-        <p>Best Selling</p>
-
+      <p>Best Selling</p>
     </div>
     <section>
-        
-        <div class="side-panel">
+      <div class="side-panel">
+        <p>Filter</p>
+        <p>Year</p>
 
-        </div>
-        <div class="main-panel">
+        <input
+          type="range"
+          min="1"
+          max="100"
+          value="50"
+          class="slider"
+          id="myRange"
+        />
 
+        <form>
+          <input
+            type="checkbox"
+            id="genre1"
+            name="genre1"
+            value="Art & photography"
+          />
+          <label for="genre1"> Art & Photography</label><br /><br />
+          <input
+            type="checkbox"
+            id="genre2"
+            name="genre2"
+            value="African literature"
+          />
+          <label for="genre2"> African Literature</label><br /><br />
+          <input
+            type="checkbox"
+            id="genre3"
+            name="genre3"
+            value="Crime and thriller"
+          />
+          <label for="genre3"> Crime and thriller</label><br /><br />
+          <input type="checkbox" id="genre4" name="genre4" value="Friction" />
+          <label for="genre4"> Friction</label><br /><br />
+          <input type="checkbox" id="genre5" name="genre5" value="Biography" />
+          <label for="genre5"> Biography</label><br /><br />
+        </form>
+      </div>
+      <div class="main-panel">
+        <div class="row-1">
+          <div class="container-1 col"></div>
+          <div class="container-2 col"></div>
+          <div class="container-2 col"></div>
         </div>
+        <div class="row-2">
+          <div class="container-1 col"></div>
+          <div class="container-2 col"></div>
+          <div class="container-3 col"></div>
+        </div>
+      </div>
     </section>
-</body>
+    <script>
+      feather.replace();
+    </script>
+  </body>
 </html>
